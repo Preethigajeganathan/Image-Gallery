@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <link rel="stylesheet" href="image.css">
+    <link rel="shortcut icon" href="./images/gallery.png" type="image/x-png">
+</head>
+<body>
+    <div class="gallery-wrap">
+        <img src="./images/back.png" id="backbtn">
+        <div class="gallery">
+        <div>
+            <span><img src="./images/image-1.png"  ></span>
+            <span><img src="./images/image-2.png"  ></span>
+            <span><img src="./images/image-3.png"  ></span>
+        
+            <span><img src="./images/image-4.png"  ></span>
+            <span><img src="./images/image-5.png"  ></span>
+            <span><img src="./images/image-6.png"  ></span>
+       
+            <span><img src="./images/img1.jpg"  ></span>
+            <span><img src="./images/img2.jpg"  ></span>
+            <span><img src="./images/img3.jpg"  ></span>
+        
+            <span><img src="./images/img4.jpg"  ></span>
+            <span><img src="./images/img5.png"  ></span>
+            <span><img src="./images/img6.jpg"  ></span>
+
+            <span><img src="./images/img7.jpg"  ></span>
+            <span><img src="./images/img8.jpg"  ></span>
+            <span><img src="./images/img9.jpg"  ></span>
+        </div>
+        </div>
+        <img src="./images/next.png" id="nextbtn">
+    </div>
+
+    <script>
+
+        let scrollcontainer = document.querySelector(".gallery");
+        let backbtn = document.getElementById("backbtn");
+        let nextbtn = document.getElementById("nextbtn");
+
+        scrollcontainer.addEventListener("wheel", (evt) => {
+            evt.preventDefault();
+            scrollcontainer.scrollLeft += evt.deltaY;
+        });
+
+        nextbtn.addEventListener("click", () => {
+        scrollcontainer.scrollLeft += scrollcontainer.clientWidth;
+        });
+
+        backbtn.addEventListener("click", () => {
+        scrollcontainer.scrollLeft -= scrollcontainer.clientWidth;
+        });
+
+    </script>
+</body>
+</html>
