@@ -4,7 +4,7 @@ A modern and responsive **Image Gallery** built using **HTML, CSS, and JavaScrip
 
 ## 🚀 Live Demo
 
-🔗 https://your-live-demo-link.com
+🔗 https://preethigajeganathan.github.io/Image-Gallery/
 
 ## 🚀 Features
 
